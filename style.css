@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+nav a.active {
+  color: #A41F13;
+  border-bottom: 3px solid #A41F13;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+ /* Font pairing customization */
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+html {
+  font-size: 1rem;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 1rem;
+  overflow-x: hidden;
+  background-color: #FAF5F1;
+  color: #292F36;
+}
+
+
+section {
+  background-color: #FAF5F1;
+}
+
+header {
+  margin-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem clamp(5%, 9vw, 9%);
+  background-color: transparent;
+  filter: drop-shadow(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #A41F13;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+nav a {
+  font-size: 1rem;
+  color: #A41F13;
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+  color: #292F36;
+  border-bottom: 3px solid #292F36;
+}
+
+section {
+  min-height: auto;
+  padding: 4rem 6% 2rem; /* Less top padding */
+  background-color: #FAF5F1;
+}
+
+
+.education-container {
+  padding-bottom: 2rem; /* Less bottom space */
+}
+
+.contact {
+  padding-top: 2rem; /* Less top space */
+}
+
+
+/* === Animated Topographic Background === */
+#topo-decoration {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('design/1.png') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.05;
+  pointer-events: none;
+  animation: fadeIn 2s ease;
+}
+
+/*HOME*/
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(4rem, 6vw, 8rem);
+  background-color: #ebe9e1;
+  flex-wrap: wrap;
+}
+
+.home .home-content h1 {
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/*ITO YUNG GAV SA HI ITS...*/
+span {
+  color: #A41F13;
+}
+
+.home-content h3 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.home-content p {
+  font-size: clamp(1rem, 1.4vw, 1.3rem);
+  line-height: 1.6;
+  max-width: 65ch;
+}
+
+.home-img {
+  border-radius: 50%;
+}
+
+.home-img img {
+  width: clamp(200px, 30vw, 400px);
+  height: auto;
+  max-width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 25px solid #292F36;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  border: 0.2rem solid #292F36;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.3s ease;
+  color: #292F36;
+}
+
+.social-icons a:hover {
+  color: white;
+  transform: scale(1.3) translateY(-5px);
+  background-color: #292F36;
+  box-shadow: 0 0 25px #292F36;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background-color: black;
+  border-radius: 4rem;
+  font-size: 1rem;
+  color: #A41F13;
+  letter-spacing: 0.3rem;
+  font-weight: 600;
+  border: 2px solid #A41F13;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+  background-color: #A41F13;
+  color: white;
+  box-shadow: 0 0 25px #8F7A6E;
+}
+
+.typing-text {
+  font-size: clamp(1.5rem, 2.2vw, 2.4rem);
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.typing-text span::after {
+  content: "";
+  background-color: #E0DBD8;
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  border-left: 3px solid #ebe9e1;
+  right: -8px;
+  animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 3px solid #ebe9e1;
+  }
+}
+
+/*SKILLS*/
+
+.skills,
+.contact {
+  padding: 3rem 0;
+  min-height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* padding: 0; Removes excess space */
+  color: #292F36;
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+
+.skills h1,
+.contact h2 {
+  text-align: center;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.contact-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.contact-item {
+  background: linear-gradient(145deg, #ebb2ac, #ffffff);
+  padding: 1rem 2.5rem;
+  border-radius: 3rem;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15),
+              -5px -5px 10px rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  color: #292F36;
+  font-weight: 500;
+  text-align: center;
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  flex: 1 1 clamp(250px, 50%, 500px);
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 8px 8px 20px #292F36,
+              -5px -5px 10px #292F36;
+}
+
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.skill-bar {
+  background: white;
+  padding: 2rem 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 128, 0, 0.1);
+}
+
+.skill-bar .label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.bar {
+  background: #ebb2ac;
+  border-radius: 1rem;
+  overflow: hidden;
+  height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.bar .progress {
+  background: linear-gradient(to right, #A41F13, #A41F13);
+  height: 100%;
+  transition: width 1.5s ease-in-out;
+}
+
+.skill-bar p {
+  font-size: 0.95rem;
+  color: #292F36; /*DESCRIPTION SA SKILLS*/
+}
+
+/* Education */
+.education h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #292F36;
+  text-align: center;
+  margin-bottom: 3rem;
+  text-shadow: 2px 2px 4px #E0DBD8;
+  letter-spacing: 0.1rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.education-fancy li {
+  margin-bottom: 2rem;
+  background: linear-gradient(145deg, #8f7a6e6e, #8f7a6e6e);
+  border-left: 10px solid #A41F13;
+  border-radius: 1.5rem;
+  padding: 2rem 2.5rem 2rem 4rem;
+  box-shadow: 5px 5px 15px rgba(250, 224, 224, 0.15), -5px -5px 10px rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+.education-fancy li::before {
+  content: "✔";
+  position: absolute;
+  left: 1rem;
+  top: 30%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #A41F13;
+}
+
+.education-fancy h3 {
+  font-size: 1.3rem;
+  color: #292F36;
+}
+
+.education-fancy span {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #292F36;
+}
+
+.education-fancy li:hover {
+  transform: translateY(-6px);
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.9);
+}
+
+/* Cert & Modal */
+.download-btn,
+.view-btn {
+  display: inline-block;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  background: #292F36;
+  color: #fff;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px #8F7A6E;
+}
+
+.download-btn:hover,
+.view-btn:hover {
+  background: #A41F13;
+  transform: scale(1.05);
+}
+
+.modal-content {
+  width: 90%;
+  max-width: 1000px;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+/* Mobile Nav & Responsive */
+@media (max-width: 995px) {
+  nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    border-left: 3px solid #292F36;
+    border-bottom: 3px solid #292F36;
+    border-bottom-left-radius: 2rem;
+    padding: 1rem;
+    background-color: #161616;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+
+  .home {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 4rem 2rem;
+  }
+
+  .home-img img {
+    width: 70vw;
+    margin-top: 4rem;
+  }
+
+  .home-content,
+  .home .home-content h1,
+  .home-content h3 {
+    text-align: center;
+  }
+
+ 
+
+  
+}
