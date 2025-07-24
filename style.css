@@ -63,7 +63,13 @@ header {
   font-weight: 800;
   cursor: pointer;
   transition: 0.5s ease;
+
+  /* Prevent name from wrapping */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
 
 .logo:hover {
   transform: scale(1.1);
@@ -100,20 +106,7 @@ section {
 }
 
 
-/* === Animated Topographic Background === */
-#topo-decoration {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: url('design/1.png') no-repeat center center;
-  background-size: cover;
-  z-index: -1;
-  opacity: 0.05;
-  pointer-events: none;
-  animation: fadeIn 2s ease;
-}
+
 
 /*HOME*/
 
@@ -448,8 +441,20 @@ span {
   .home-content h3 {
     text-align: center;
   }
-
- 
-
   
+
+  /* Typing cursor animation */
+.cursor {
+  display: inline-block;
+  margin-left: 4px;
+  animation: blink 0.7s infinite;
+  color: #A41F13;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 }
