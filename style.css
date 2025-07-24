@@ -148,7 +148,7 @@ span {
 }
 
 .home-img img {
-  width: clamp(200px, 30vw, 400px);
+  width: clamp(500px, 30vw, 400px);
   height: auto;
   max-width: 100%;
   border-radius: 50%;
