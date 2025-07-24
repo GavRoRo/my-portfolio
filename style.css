@@ -289,13 +289,15 @@ span {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  padding: 0 5rem;
 }
 
 .skill-bar {
   background: white;
-  padding: 2rem 2.5rem;
+  padding: 2rem 3rem;
   border-radius: 1.5rem;
   box-shadow: 0 4px 15px rgba(0, 128, 0, 0.1);
+  margin: 0 40rem;
 }
 
 .skill-bar .label {
